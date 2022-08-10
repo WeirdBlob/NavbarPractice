@@ -2,10 +2,19 @@
     margin: 0;
     padding: 0;
     font-size: 100%;
+    font-family: 'Poppins', sans-serif;
 }
-.header{
+
+/*general settings*/
+
+section{
     width: 100%;
     min-height: 100vh;
+}
+
+/*header section*/
+
+.header{
     background-image: linear-gradient(rgba(38, 41, 51, 0.7), rgba(38, 41, 51, 0.7)), url("bamboo.jpg");
     background-position: center;
     background-size: cover;
@@ -13,36 +22,40 @@
 }
 nav{
     display: flex;
+    align-items: center;
+    height: 8rem;
+    border: 1px solid red;
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(0.5rem);
 }
 nav ul{
-    display: flex;
-    align-items: center;
-    margin: 3vh auto;
-    background: hsl(0, 0%, 100%, 0.1);
-    border-radius: 2em;
-    height: 5rem;
-    padding: 0 3rem;
+    overflow: hidden;
+    list-style: none;
+    margin: auto;
+    border-radius: 10rem;
+    background: rgba(38, 41, 51, 0.7);
 }
 nav ul li{
-    text-align: center;
-    list-style: none;
     display: inline-block;
-    padding: .5em 1em;
+    padding: 1.5rem;
 }
 nav ul li a{
-    text-decoration: none;
+    font-size: 1.2rem;
     color: white;
-    font-size: 1.5rem;
+    text-decoration: none;
 }
-nav ul li::after {
-    content: '';
-    width: 0;
-    height: 0.15em;
+nav ul li::after{
     display: block;
-    margin: auto;
     background: white;
+    content: '';
+    height: 0.1rem;
+    margin: auto;
     transition: 0.5s;
+    width: 0;
 }
 nav ul li:hover::after{
     width: 100%;
+}
+nav ul li:hover{
+    background: rgba(38, 41, 51, 1);
 }
