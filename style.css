@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 100%;
 }
 .header{
     width: 100%;
@@ -12,35 +13,36 @@
 }
 nav{
     display: flex;
+}
+nav ul{
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 2% 10%;
+    margin: 3vh auto;
+    background: hsl(0, 0%, 100%, 0.1);
+    border-radius: 2em;
+    height: 5rem;
+    padding: 0 3rem;
 }
-.nav-links{
-    margin: auto;
-    background: rgba(38, 41, 51, 1);
-    padding: 20px;
-    border-radius: 40px;
-}
-.nav-links ul li{
+nav ul li{
+    text-align: center;
     list-style: none;
     display: inline-block;
-    padding: 0 20px;
+    padding: .5em 1em;
 }
-.nav-links ul li a{
+nav ul li a{
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
-.nav-links ul li::after{
+nav ul li::after {
     content: '';
+    width: 0;
+    height: 0.15em;
     display: block;
     margin: auto;
-    background: khaki;
-    height: 2px;
-    width: 0;
+    background: white;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+nav ul li:hover::after{
     width: 100%;
 }
